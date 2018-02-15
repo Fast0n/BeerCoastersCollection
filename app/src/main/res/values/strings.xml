@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Beer Coasters Collection</string>
+
+    <string name="login_mail">E-mail o nome utente</string>
+    <string name="password">Password</string>
+    <string name="login">Accedi</string>
+    <string name="login_text_bottom_one">Non hai un account?</string>
+    <string name="login_text_bottom_two">Iscriviti.</string>
+
+    <string name="signup_title">INSERISCI NOME E PASSWORD</string>
+    <string name="signup_name">Nome e cognome</string>
+    <string name="signup_username">Nome Utente</string>
+    <string name="signup_mail">E-mail</string>
+    <string name="signup">Iscriviti</string>
+    <string name="signup_text_bottom_one">Hai già un account?</string>
+    <string name="signup_text_bottom_two" >Accedi.</string>
+
+    <!-- toast/Error -->
+    <string name="toast_signup">Dati di accesso inviati per E-mail</string>
+    <string name="error">Campo vuoto</string>
+    <string name="errorMail">E-mail non valida</string>
+    <string name="errorLength">Testo troppo breve</string>
+
+</resources>
