@@ -1,24 +1,81 @@
 <resources>
-    <string name="app_name">Beer Coasters Collection</string>
 
-    <string name="login_mail">E-mail o nome utente</string>
+    <!-- Login Activity -->
+    <string name="login_email">E-mail or username</string>
     <string name="password">Password</string>
-    <string name="login">Accedi</string>
-    <string name="login_text_bottom_one">Non hai un account?</string>
-    <string name="login_text_bottom_two">Iscriviti.</string>
+    <string name="login">Login</string>
+    <string name="login_facebook">Login to Facebook</string>
+    <string name="login_text_bottom_one">Don\'t have an account?</string>
+    <string name="login_text_bottom_two">Sign up.</string>
+    <string name="help_text_bottom_one">Can\'t remember your login information?</string>
+    <string name="help_text_bottom_two">Get help with access.</string>
 
-    <string name="signup_title">INSERISCI NOME E PASSWORD</string>
-    <string name="signup_name">Nome e cognome</string>
-    <string name="signup_username">Nome Utente</string>
-    <string name="signup_mail">E-mail</string>
-    <string name="signup">Iscriviti</string>
-    <string name="signup_text_bottom_one">Hai già un account?</string>
-    <string name="signup_text_bottom_two" >Accedi.</string>
+    <!-- Signup Activity -->
+    <string name="signup_title">Enter your name, username and password</string>
+    <string name="signup_name">Name and surname</string>
+    <string name="signup_username">Username</string>
+    <string name="signup_email">E-mail</string>
+    <string name="signup_random_pwd">Generated secure password</string>
+    <string name="signup">Sign up</string>
+    <string name="signup_text_bottom_one">You already have an account?</string>
+    <string name="signup_text_bottom_two">Login.</string>
+
+    <!-- Help Activity -->
+    <string name="help_title">Enter your email address and we\'ll send you a link to reset your password.</string>
+    <string name="reset_password">Reset password</string>
+    <string name="back">Back</string>
+
+    <!-- Menu Activity -->
+    <string name="ic_search">Add a coaster</string>
+    <string name="ic_list">List</string>
+    <string name="ic_logout">Logout</string>
+
+    <!-- Settings Activity -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="sure_two">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="change_name_one">Change name</string>
+    <string name="change_name_two">Enter new name</string>
+    <string name="change_password_one">Change password</string>
+    <string name="change_password_two">Enter new password</string>
+    <string name="change_password_three">Log in to change the password</string>
+    <string name="delete_account_one">Delete account</string>
+    <string name="delete_account_two">Log in to delete the account</string>
+    <string name="delete_account_three">To change the password you have to log in again</string>
 
     <!-- toast/Error -->
-    <string name="toast_signup">Dati di accesso inviati per E-mail</string>
-    <string name="error">Campo vuoto</string>
-    <string name="errorMail">E-mail non valida</string>
-    <string name="errorLength">Testo troppo breve</string>
+    <string name="toastBlock">Account blocked</string>
+    <string name="toastAccountDeleted">Deleted account</string>
+    <string name="toastOk">Fully functional</string>
+    <string name="toastSignup">Check your email</string>
+    <string name="toastChangePassword">Password reset link sent by email</string>
+    <string name="error">Empty field</string>
+    <string name="errorSpace">The field cannot contain only spaces</string>
+    <string name="errorConnection">Check your connection and try again</string>
+    <string name="errorEmailVerify">Unverified Email</string>
+    <string name="errorEmail">Invalid email</string>
+    <string name="errorEmailExists">Email already in use</string>
+    <string name="errorPassword">Invalid password</string>
+    <string name="errorUsernameExists">Username not available</string>
+    <string name="errorLength">Text too short</string>
+    <string name="comingSoon">Coming Soon...</string>
+    <string name="changePasswordSuccess">Password changed</string>
+    <string name="changeNameSuccess">Name changed</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+
+    <!-- Olther -->
+    <string name="app_name" translatable="false">Beer Coasters Collection</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Settings List -->
+    <string-array name="setting_list">
+        <item>@string/change_name_one</item>
+        <item>@string/change_password_one</item>
+        <item>¯¯\\_(ツ)_/¯¯</item>
+    </string-array>
 
 </resources>

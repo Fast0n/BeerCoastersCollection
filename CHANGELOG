@@ -1,4 +1,17 @@
-#### v0.1 (Offline)
+## Changelog: ##
+#### [v0.2 (Online)](https://github.com/Fast0n/BeerCoastersCollection/releases/tag/v0.2)
+* Integrazione con Firebase Authentication, Database, Crashlytics e Notification
+* Integrazione con l'Autofill di Android Oreo 
+* Aggiunte le schermate di ripristino password e impostazioni
+* Aggiunto un sistema di creazione della password sicura
+* Aggiornata la grafica in Material Design e aggiunta la splash screen
+* Corretto il controllo dei campi
+#### Librerie aggiunte ####
+* Aggiunte le varie librerie di Google per Firebase
+* Aggiunta la libreria di @yshrsmz per il controllo apertura/chiusura della tastiera
+* Aggiunta la libreria di @GrenderG per la creazione di Toast personalizzati
+
+#### [v0.1 (Offline)](https://github.com/Fast0n/BeerCoastersCollection/releases/tag/v0.1)
 * Schermata di login e di sign up 
 * Controllo dei campi (vuoti/troppo corti/mail) e cambio del comportamento del button (login/signup)
 * Grafica minimal e string.xml per le traduzioni complete
