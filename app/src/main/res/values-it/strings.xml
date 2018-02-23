@@ -1,0 +1,81 @@
+<resources>
+
+    <!-- Login Activity -->
+    <string name="login_email">E-mail o nome utente</string>
+    <string name="password">Password</string>
+    <string name="login">Accedi</string>
+    <string name="login_facebook">Accedi con Facebook</string>
+    <string name="login_text_bottom_one">Non hai un account?</string>
+    <string name="login_text_bottom_two">Iscriviti.</string>
+    <string name="help_text_bottom_one">Non ricordi le informazioni di accesso?</string>
+    <string name="help_text_bottom_two">Richiedi assistenza con l\'accesso.</string>
+
+    <!-- Signup Activity -->
+    <string name="signup_title">Inserisci nome, nome utente e password</string>
+    <string name="signup_name">Nome e cognome</string>
+    <string name="signup_username">Nome Utente</string>
+    <string name="signup_email">E-mail</string>
+    <string name="signup_random_pwd">Password generata automaticamente</string>
+    <string name="signup">Iscriviti</string>
+    <string name="signup_text_bottom_one">Hai già un account?</string>
+    <string name="signup_text_bottom_two">Accedi.</string>
+
+    <!-- Help Activity -->
+    <string name="help_title">Inserisci il tuo indirizzo email e ti invieremo un link per reimpostare la password</string>
+    <string name="reset_password">Ripristina password</string>
+    <string name="back">Indietro</string>
+
+    <!-- Menu Activity -->
+    <string name="ic_search">Aggiungi un sottobicchiere</string>
+    <string name="ic_list">Lista</string>
+    <string name="ic_logout">Esci</string>
+
+    <!-- Settings Activity -->
+    <string name="title_activity_settings">Impostazioni</string>
+    <string name="sure_two">Sei sicuro di voler uscire?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="change_name_one">Cambia nome</string>
+    <string name="change_name_two">Inserisci nuovo nome</string>
+    <string name="change_password_one">Cambia password</string>
+    <string name="change_password_two">Inserisci nuova password</string>
+    <string name="change_password_three">Esegui il login per cambiare la password</string>
+    <string name="delete_account_one">Elimina account</string>
+    <string name="delete_account_two">Esegui il login per eliminare l\'account</string>
+    <string name="delete_account_three">Per cambiare la password devi eseguire di nuovo il login</string>
+
+    <!-- toast/Error -->
+    <string name="toastBlock">Account bloccato</string>
+    <string name="toastAccountDeleted">Account eliminato</string>
+    <string name="toastOk">Tutto funzionante</string>
+    <string name="toastSignup">Controlla la tua E-mail</string>
+    <string name="toastChangePassword">Link per reimpostare la password inviato per E-mail</string>
+    <string name="error">Campo vuoto</string>
+    <string name="errorSpace">Il campo non può contenere solo spazi</string>
+    <string name="errorConnection">Controlla la connessione e riprova</string>
+    <string name="errorEmailVerify">Email non verificata</string>
+    <string name="errorEmail">E-mail non valida</string>
+    <string name="errorEmailExists">Email già in uso</string>
+    <string name="errorPassword">Password non valida</string>
+    <string name="errorUsernameExists">Nome utente non disponibile</string>
+    <string name="errorLength">Testo troppo breve</string>
+    <string name="comingSoon">Prossimamente...</string>
+    <string name="changePasswordSuccess">Password cambiata</string>
+    <string name="changeNameSuccess">Nome cambiato</string>
+    <string name="cancel">Annulla</string>
+    <string name="ok">Ok</string>
+
+    <!-- Olther -->
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="fab_add">a</string>
+    <string name="fab_search">Cerca</string>
+
+    <!-- Settings List -->
+    <string-array name="setting_list">
+        <item>@string/change_name_one</item>
+        <item>@string/change_password_one</item>
+        <item>¯¯\\_(ツ)_/¯¯</item>
+    </string-array>
+</resources>

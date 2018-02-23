@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,8 +18,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,13 +41,17 @@ import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     View header;
-    int a = 2;
     private FirebaseAuth auth;
     private FirebaseDatabase database;
     private DatabaseReference databaseRef;
+
+    private Boolean isFabOpen = false;
+    private FloatingActionButton fab,fab1,fab2;
+    private Animation fab_open,fab_close,rotate_forward,rotate_backward;
+    private Button fabText1, fabText2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +78,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
          * Indirizzi java
          */
         header = navigationView.getHeaderView(0);
+
+        fab = (FloatingActionButton)findViewById(R.id.fab);
+        fab1 = (FloatingActionButton)findViewById(R.id.fab1);
+        fab2 = (FloatingActionButton)findViewById(R.id.fab2);
+        fab_open = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
+        fab_close = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fab_close);
+        rotate_forward = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_forward);
+        rotate_backward = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_backward);
+        fab.setOnClickListener(this);
+        fab1.setOnClickListener(this);
+        fab2.setOnClickListener(this);
+        fabText1 = (Button)findViewById(R.id.fabText1);
+        fabText2 = (Button)findViewById(R.id.fabText2);
 
         /**
          * Colore Navbar
@@ -219,6 +240,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
+
     private void showData(DataSnapshot dataSnapshot) {
         for (final DataSnapshot ds : dataSnapshot.getChildren()) {
             final DatabaseInformation uInfo = new DatabaseInformation();
@@ -259,17 +282,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                      * in base al numero
                      */
 
-                    if (uInfo.getEmail().length() <= 15) {
+                    if (uInfo.getEmail().length() < 15) {
                         email.setText(uInfo.getEmail());
                     } else {
-                        email.setText(uInfo.getEmail().substring(0, 18) + "...");
+                        email.setText(uInfo.getEmail().substring(0, 15) + "...");
                     }
 
-                    if (uInfo.getName().length() <= 18) {
+                    if (uInfo.getName().length() < 18) {
                         name.setText(uInfo.getName());
-                    } else {
-                        name.setText(uInfo.getName().substring(0, 20) + "...");
+                    } else{
+                        name.setText(uInfo.getName().substring(0, 18) + "...");
                     }
+
 
                     if (uInfo.getStatus() == 1) {
                         auth.signOut();
@@ -286,7 +310,68 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
+
     }
+
+    /**
+     * Programmo il fab
+     */
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id){
+            case R.id.fab:
+
+                animateFAB();
+                break;
+            case R.id.fab1:
+
+
+                break;
+            case R.id.fab2:
+
+
+                break;
+        }
+    }
+
+    public void animateFAB(){
+
+        if(isFabOpen){
+
+            fab.startAnimation(rotate_backward);
+
+            fabText1.startAnimation(fab_close);
+            fabText2.startAnimation(fab_close);
+
+            fab1.startAnimation(fab_close);
+            fab2.startAnimation(fab_close);
+            fab1.setClickable(false);
+            fab2.setClickable(false);
+            isFabOpen = false;
+
+
+        } else {
+
+            fab.startAnimation(rotate_forward);
+
+            fabText1.setVisibility(View.VISIBLE);
+            fabText2.setVisibility(View.VISIBLE);
+
+            fabText1.startAnimation(fab_open);
+            fabText2.startAnimation(fab_open);
+
+            fab1.startAnimation(fab_open);
+            fab2.startAnimation(fab_open);
+            fab1.setClickable(true);
+            fab2.setClickable(true);
+            isFabOpen = true;
+
+
+        }
+    }
+
 
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -306,6 +391,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             finish();
         }
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -342,6 +429,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

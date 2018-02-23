@@ -48,7 +48,7 @@ dependencies {
     compile 'com.google.firebase:firebase-core:11.8.0'
     //Add keyboard library
     compile 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0'
-    //Add library spinner
-    compile 'com.github.ganfra:material-spinner:2.0.0'
+    //Add fab library
+    compile 'com.github.clans:fab:1.6.2'
 }
 apply plugin: 'com.google.gms.google-services'
